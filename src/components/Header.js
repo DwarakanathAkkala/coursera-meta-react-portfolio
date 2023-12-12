@@ -64,11 +64,20 @@ const Header = () => {
           alignItems="center"
         >
           <nav>
-            {/* Add social media links based on the `socials` data */}
+            <HStack spacing={8}>
+              {
+                socials.map((data) => {
+                  return (
+                    <FontAwesomeIcon icon={data.icon} size="2x" />
+                  )
+                })
+              }
+            </HStack>
           </nav>
           <nav>
             <HStack spacing={8}>
-              {/* Add links to Projects and Contact me section */}
+              <a href="#projects">Projects</a>
+              <a href="#contact-me">Contact Me</a>
             </HStack>
           </nav>
         </HStack>
