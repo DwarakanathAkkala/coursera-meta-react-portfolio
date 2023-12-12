@@ -68,7 +68,7 @@ const Header = () => {
               {
                 socials.map((data) => {
                   return (
-                    <FontAwesomeIcon icon={data.icon} size="2x" />
+                    <FontAwesomeIcon key={data.url} icon={data.icon} onClick={handleClick} size="2x" />
                   )
                 })
               }
@@ -76,8 +76,8 @@ const Header = () => {
           </nav>
           <nav>
             <HStack spacing={8}>
-              <a href="#projects">Projects</a>
-              <a href="#contact-me">Contact Me</a>
+              <a href="#projects" id="nav_projects">Projects</a>
+              <a href="#contact-me" id="nav_contact">Contact Me</a>
             </HStack>
           </nav>
         </HStack>
